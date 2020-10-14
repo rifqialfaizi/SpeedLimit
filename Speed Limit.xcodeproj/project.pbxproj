@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07ADCA852530A16600DFD37F /* SpeedLimitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ADCA842530A16600DFD37F /* SpeedLimitVC.swift */; };
+		07ADCA882530A52E00DFD37F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07ADCA872530A52E00DFD37F /* CoreLocation.framework */; };
 		07CED1C2252ACDD9008A8B0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CED1C1252ACDD9008A8B0B /* AppDelegate.swift */; };
 		07CED1C4252ACDD9008A8B0B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CED1C3252ACDD9008A8B0B /* SceneDelegate.swift */; };
 		07CED1C6252ACDD9008A8B0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CED1C5252ACDD9008A8B0B /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07ADCA842530A16600DFD37F /* SpeedLimitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedLimitVC.swift; sourceTree = "<group>"; };
+		07ADCA872530A52E00DFD37F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		07CED1BE252ACDD9008A8B0B /* Speed Limit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Speed Limit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07CED1C1252ACDD9008A8B0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07CED1C3252ACDD9008A8B0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07ADCA882530A52E00DFD37F /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07ADCA832530A13500DFD37F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				07ADCA842530A16600DFD37F /* SpeedLimitVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		07ADCA862530A52E00DFD37F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07ADCA872530A52E00DFD37F /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		07CED1B5252ACDD9008A8B0B = {
 			isa = PBXGroup;
 			children = (
 				07CED1C0252ACDD9008A8B0B /* Speed Limit */,
 				07CED1BF252ACDD9008A8B0B /* Products */,
+				07ADCA862530A52E00DFD37F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +78,7 @@
 		07CED1C0252ACDD9008A8B0B /* Speed Limit */ = {
 			isa = PBXGroup;
 			children = (
+				07ADCA832530A13500DFD37F /* Controller */,
 				07CED1C1252ACDD9008A8B0B /* AppDelegate.swift */,
 				07CED1C3252ACDD9008A8B0B /* SceneDelegate.swift */,
 				07CED1C5252ACDD9008A8B0B /* ViewController.swift */,
@@ -140,6 +163,7 @@
 			files = (
 				07CED1C6252ACDD9008A8B0B /* ViewController.swift in Sources */,
 				07CED1C2252ACDD9008A8B0B /* AppDelegate.swift in Sources */,
+				07ADCA852530A16600DFD37F /* SpeedLimitVC.swift in Sources */,
 				07CED1C4252ACDD9008A8B0B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
