@@ -14,10 +14,14 @@ class DataService{
         
     static let history = DataService()
 
+    // Ini mau coba akses historySpeed dari SpeedLimitVC
+        
+    
     let speedFromSLVC = SpeedLimitVC.historySpeedForHistory
     var speedForDS: [Int] {
         speedFromSLVC.historySpeed }
     
+    // Niatnya mau di taroh di bawah sini
     
     private let history = [
         History(speed: 20, duration: 20,time: "12.20",date: "Sunday, 2020 October 4th",street: "Jl. Tol Jakarta - Cikampek "),
