@@ -11,6 +11,8 @@ import MapKit
 import CoreLocation
 
 class SpeedLimitVC: UIViewController {
+    
+    static let historySpeedForHistory = SpeedLimitVC()
 
     @IBOutlet weak var warningLabel: UILabel!
     @IBOutlet weak var speedLabel: UILabel!
@@ -29,12 +31,11 @@ class SpeedLimitVC: UIViewController {
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
         
-        duration = Timer.scheduledTimer(timeInterval: 1, target: self, selector: Selector("timerCount"), userInfo: nil, repeats: true)
-
-       
+        duration = Timer.scheduledTimer(timeInterval: 1, target: self, selector: Selector(("timerCount")), userInfo: nil, repeats: true)
+ 
     }
     
-    var speedHist: SpeedLimitVC = SpeedLimitVC()
+
     
     var duration = Timer()
     var time = 0
@@ -47,7 +48,9 @@ class SpeedLimitVC: UIViewController {
     var historyDuration = [Int]()
     var historySpeed = [Int]()
     
-    
+    func getHistorySpeed(speed: Int) -> [Int] {
+        return historySpeed
+    }
 }
 
 extension SpeedLimitVC: CLLocationManagerDelegate {
@@ -97,6 +100,7 @@ extension SpeedLimitVC: CLLocationManagerDelegate {
             time = 0
         }
         durationLabel.text = String(time)
+        
         print("last Speed \(lastSpeed)")
         print("last duration  \(lastDuration)")
         print("History Duration \(historyDuration)")
@@ -106,5 +110,3 @@ extension SpeedLimitVC: CLLocationManagerDelegate {
     
     
 }
-
-
