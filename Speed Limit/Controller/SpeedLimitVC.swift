@@ -34,6 +34,8 @@ class SpeedLimitVC: UIViewController {
        
     }
     
+    var speedHist: SpeedLimitVC = SpeedLimitVC()
+    
     var duration = Timer()
     var time = 0
     var speedSpeed = 0
@@ -105,6 +107,4 @@ extension SpeedLimitVC: CLLocationManagerDelegate {
     
 }
 
-
-// checkkk
 

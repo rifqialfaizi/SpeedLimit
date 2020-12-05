@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		073003452551803C00DF6508 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073003442551803C00DF6508 /* HistoryVC.swift */; };
+		07300348255184E800DF6508 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07300347255184E800DF6508 /* HistoryCell.swift */; };
+		0730034B2551A3FA00DF6508 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0730034A2551A3FA00DF6508 /* History.swift */; };
+		0730034E2551A61300DF6508 /* Data Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0730034D2551A61300DF6508 /* Data Services.swift */; };
 		07ADCA852530A16600DFD37F /* SpeedLimitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ADCA842530A16600DFD37F /* SpeedLimitVC.swift */; };
 		07ADCA882530A52E00DFD37F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07ADCA872530A52E00DFD37F /* CoreLocation.framework */; };
 		07CED1C2252ACDD9008A8B0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CED1C1252ACDD9008A8B0B /* AppDelegate.swift */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		073003442551803C00DF6508 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
+		07300347255184E800DF6508 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
+		0730034A2551A3FA00DF6508 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		0730034D2551A61300DF6508 /* Data Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data Services.swift"; sourceTree = "<group>"; };
 		07ADCA842530A16600DFD37F /* SpeedLimitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedLimitVC.swift; sourceTree = "<group>"; };
 		07ADCA872530A52E00DFD37F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		07CED1BE252ACDD9008A8B0B /* Speed Limit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Speed Limit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,10 +50,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07300346255184B800DF6508 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				07300347255184E800DF6508 /* HistoryCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		073003492551A3E300DF6508 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0730034A2551A3FA00DF6508 /* History.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0730034C2551A5FA00DF6508 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0730034D2551A61300DF6508 /* Data Services.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		07ADCA832530A13500DFD37F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				07ADCA842530A16600DFD37F /* SpeedLimitVC.swift */,
+				073003442551803C00DF6508 /* HistoryVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -78,6 +111,9 @@
 		07CED1C0252ACDD9008A8B0B /* Speed Limit */ = {
 			isa = PBXGroup;
 			children = (
+				0730034C2551A5FA00DF6508 /* Services */,
+				073003492551A3E300DF6508 /* Model */,
+				07300346255184B800DF6508 /* View */,
 				07ADCA832530A13500DFD37F /* Controller */,
 				07CED1C1252ACDD9008A8B0B /* AppDelegate.swift */,
 				07CED1C3252ACDD9008A8B0B /* SceneDelegate.swift */,
@@ -161,7 +197,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07300348255184E800DF6508 /* HistoryCell.swift in Sources */,
 				07CED1C6252ACDD9008A8B0B /* ViewController.swift in Sources */,
+				0730034B2551A3FA00DF6508 /* History.swift in Sources */,
+				073003452551803C00DF6508 /* HistoryVC.swift in Sources */,
+				0730034E2551A61300DF6508 /* Data Services.swift in Sources */,
 				07CED1C2252ACDD9008A8B0B /* AppDelegate.swift in Sources */,
 				07ADCA852530A16600DFD37F /* SpeedLimitVC.swift in Sources */,
 				07CED1C4252ACDD9008A8B0B /* SceneDelegate.swift in Sources */,
