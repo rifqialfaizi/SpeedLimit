@@ -31,7 +31,7 @@ class SpeedLimitVC: UIViewController {
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
         
-        duration = Timer.scheduledTimer(timeInterval: 1, target: self, selector: Selector(("timerCount")), userInfo: nil, repeats: true)
+        duration = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.timerCount), userInfo: nil, repeats: true)
  
     }
     
