@@ -20,6 +20,8 @@ class SpeedLimitVC: UIViewController {
     @IBOutlet weak var maxSpeedLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var bgImageView: UIImageView!
+    @IBOutlet weak var alertBG: UIView!
+    
     
     let manager = CLLocationManager()
     
@@ -64,10 +66,20 @@ extension SpeedLimitVC: CLLocationManagerDelegate {
     func checkSpeedLimit(_ speed: Int) {
 
         if speed > 3 {
+            
+            warningLabel.text = "Too Fast!"
+            
+            alertBG.backgroundColor = UIColor.red.withAlphaComponent(0.7)
+            
             print("Too Fast! Your current speed is \(speed)")
             
             isOverLimit = true
-        } else {
+        } else if speed < 3 {
+            
+            alertBG.backgroundColor = UIColor.clear
+           
+            
+            warningLabel.text = "Not Fast!"
             
             isOverLimit = false
         }
@@ -131,5 +143,4 @@ extension SpeedLimitVC: CLLocationManagerDelegate {
     
 }
 
-// aseloleehhhh
 
