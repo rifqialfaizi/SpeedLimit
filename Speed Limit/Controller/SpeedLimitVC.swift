@@ -34,11 +34,8 @@ class SpeedLimitVC: UIViewController {
        // duration = Timer.scheduledTimer(timeInterval: 1, target: self, selector: Selector(("timerCount")), userInfo: nil, repeats: true)
         
         duration = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.timerCount), userInfo: nil, repeats: true)
- 
     }
-    
 
-    
     var duration = Timer()
     var time = 0
     var speedSpeed = 0
@@ -58,26 +55,18 @@ class SpeedLimitVC: UIViewController {
 extension SpeedLimitVC: CLLocationManagerDelegate {
     
   func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
     let location = locations.first!
-
         let stringSpeed = String(format: "%.0f", location.speed)
-        
         speedLabel.text = "\(stringSpeed)"
-        
         checkSpeedLimit(Int(location.speed))
-        
     }
     
     func checkSpeedLimit(_ speed: Int) {
-        
-        
+
         if speed > 3 {
             print("Too Fast! Your current speed is \(speed)")
             
             isOverLimit = true
-            
-
         } else {
             
             isOverLimit = false
@@ -125,7 +114,7 @@ extension SpeedLimitVC: CLLocationManagerDelegate {
     
     private func getCurrentTime() -> String {
         let dateFormatter : DateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EEE, MMMM d, yyyy"
+        dateFormatter.dateFormat = "EEEE, MMM d, yyyy"
         let date = Date()
         let dateString = dateFormatter.string(from: date)
         return dateString
@@ -138,4 +127,9 @@ extension SpeedLimitVC: CLLocationManagerDelegate {
         let dateString = dateFormatter.string(from: date)
         return dateString
     }
+    
+    
 }
+
+// aseloleehhhh
+
