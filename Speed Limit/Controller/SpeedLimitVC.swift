@@ -94,6 +94,7 @@ extension SpeedLimitVC: CLLocationManagerDelegate {
             if lastDuration > 0 {
                 historySpeed.append(lastSpeed)
                 historyDuration.append(lastDuration)
+                saveHistory(withSpeed: lastSpeed, andDuration: lastDuration)
                 lastDuration = 0
                 lastSpeed = 0
             }
@@ -106,6 +107,35 @@ extension SpeedLimitVC: CLLocationManagerDelegate {
         print("History Duration \(historyDuration)")
         print("History Speed \(historySpeed)")
         
+    }
+    
+    /// Cara ambil jalan coba aja cari di googke pake CoreLocation: https://developer.apple.com/documentation/corelocation/converting_between_coordinates_and_user-friendly_place_names
+    private func saveHistory(withSpeed speed: Int,andDuration duration: Int) {
+        let date = getCurrentDate()
+        let time = getCurrentTime()
+        let street = "Jl. Tol Jakarta - Cikampek"
+        let history = History(speed: speed, duration: duration, time: time, date: date, street: street)
+        
+        DataService.shared.addHistory(history: history)
+    }
+    
+    ///Date formatternya bisa diliat di sini :https://nsdateformatter.com
+    
+    private func getCurrentTime() -> String {
+        let dateFormatter : DateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE, MMMM d, yyyy"
+        let date = Date()
+        let dateString = dateFormatter.string(from: date)
+        //let interval = date.timeIntervalSince1970
+        return dateString
+    }
+    
+    private func getCurrentDate() -> String {
+        let dateFormatter : DateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        let date = Date()
+        let dateString = dateFormatter.string(from: date)
+        return dateString
     }
     
     
