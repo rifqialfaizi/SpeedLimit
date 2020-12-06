@@ -31,7 +31,9 @@ class SpeedLimitVC: UIViewController {
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
         
-        duration = Timer.scheduledTimer(timeInterval: 1, target: self, selector: Selector(("timerCount")), userInfo: nil, repeats: true)
+       // duration = Timer.scheduledTimer(timeInterval: 1, target: self, selector: Selector(("timerCount")), userInfo: nil, repeats: true)
+        
+        duration = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.timerCount), userInfo: nil, repeats: true)
  
     }
     
@@ -94,6 +96,7 @@ extension SpeedLimitVC: CLLocationManagerDelegate {
             if lastDuration > 0 {
                 historySpeed.append(lastSpeed)
                 historyDuration.append(lastDuration)
+                saveHistory(withSpeed: lastSpeed, andDuration: lastDuration)
                 lastDuration = 0
                 lastSpeed = 0
             }
@@ -108,5 +111,31 @@ extension SpeedLimitVC: CLLocationManagerDelegate {
         
     }
     
+    // cara ambil jalan
+    private func saveHistory(withSpeed speed: Int, andDuration duration: Int) {
+        let date = getCurrentDate()
+        let time = getCurrentTime()
+        let street = "Jl. Tol Jakarta - Cikampek"
+        let history = History(speed: speed, duration: duration, time: time, date: date, street: street)
+        
+        DataService.shared.addHistory(history: history)
+    }
     
+    // Date formatternya bisa diliat di sini :https://nsdateformatter.com
+    
+    private func getCurrentTime() -> String {
+        let dateFormatter : DateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEE, MMMM d, yyyy"
+        let date = Date()
+        let dateString = dateFormatter.string(from: date)
+        return dateString
+    }
+    
+    private func getCurrentDate() -> String {
+        let dateFormatter : DateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH.mm"
+        let date = Date()
+        let dateString = dateFormatter.string(from: date)
+        return dateString
+    }
 }
