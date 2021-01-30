@@ -10,7 +10,7 @@
         <!--Speed LimitVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SpeedLimitVC" customModule="Speed_Limit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SpeedLimit" id="BYZ-38-t0r" customClass="SpeedLimitVC" customModule="Speed_Limit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,6 +21,9 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG3" translatesAutoresizingMaskIntoConstraints="NO" id="WNr-2T-4Ua">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                     </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="81b-Z6-ShM">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                    </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle2" translatesAutoresizingMaskIntoConstraints="NO" id="3J6-YK-Qeq">
                                         <rect key="frame" x="12.666666666666657" y="168" width="350" height="350"/>
                                         <constraints>
@@ -47,13 +50,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jl. Tol Jakarta - Cikampek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fau-wa-EEX">
-                                        <rect key="frame" x="54.333333333333343" y="536" width="266.33333333333326" height="30"/>
+                                        <rect key="frame" x="54.333333333333343" y="516" width="266.33333333333326" height="30"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="23"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QlY-mf-idy">
-                                        <rect key="frame" x="99" y="596" width="177" height="95.333333333333371"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QlY-mf-idy">
+                                        <rect key="frame" x="99" y="576" width="177" height="100.66666666666663"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maximum Speed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRK-cL-2Ww">
                                                 <rect key="frame" x="0.0" y="0.0" width="177" height="30"/>
@@ -61,14 +64,18 @@
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="110" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIM-UN-khu">
-                                                <rect key="frame" x="59.666666666666657" y="29.999999999999996" width="57.666666666666657" height="45.666666666666657"/>
-                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="35"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="100" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qtL-CN-uvQ">
+                                                <rect key="frame" x="38.666666666666657" y="38" width="100" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="08C-Wy-6Yv"/>
+                                                    <constraint firstAttribute="height" constant="35" id="Tta-Yo-wLe"/>
+                                                </constraints>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KM/H" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HpT-0B-LWT">
-                                                <rect key="frame" x="67" y="75.666666666666629" width="43.333333333333343" height="19.666666666666671"/>
+                                                <rect key="frame" x="67" y="81" width="43.333333333333343" height="19.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -76,7 +83,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTF-Q3-0j7">
-                                        <rect key="frame" x="142.66666666666666" y="711.33333333333337" width="90" height="30"/>
+                                        <rect key="frame" x="142.66666666666666" y="691.66666666666663" width="90" height="30"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="23"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -98,14 +105,11 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qb-Lj-8Z0">
-                                        <rect key="frame" x="139" y="741.33333333333337" width="97.333333333333314" height="45.666666666666629"/>
+                                        <rect key="frame" x="139" y="721.66666666666663" width="97.333333333333314" height="45.666666666666629"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="81b-Z6-ShM">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <constraints>
@@ -125,11 +129,11 @@
                                     <constraint firstAttribute="trailing" secondItem="PfW-Kh-9gd" secondAttribute="trailing" constant="40" id="X64-55-EPF"/>
                                     <constraint firstItem="fau-wa-EEX" firstAttribute="centerX" secondItem="xnw-V7-9Mh" secondAttribute="centerX" id="Xnj-jZ-VLo"/>
                                     <constraint firstItem="neW-c2-uck" firstAttribute="top" secondItem="Mml-zc-lzq" secondAttribute="bottom" constant="10" id="ZpO-JJ-cYX"/>
-                                    <constraint firstItem="fau-wa-EEX" firstAttribute="top" secondItem="SMP-Si-baN" secondAttribute="bottom" constant="70" id="Zqv-oT-Q3E"/>
+                                    <constraint firstItem="fau-wa-EEX" firstAttribute="top" secondItem="SMP-Si-baN" secondAttribute="bottom" constant="50" id="Zqv-oT-Q3E"/>
                                     <constraint firstItem="3J6-YK-Qeq" firstAttribute="centerX" secondItem="xnw-V7-9Mh" secondAttribute="centerX" id="bpW-ey-dLd"/>
                                     <constraint firstItem="SMP-Si-baN" firstAttribute="top" secondItem="Wpx-Ls-ceS" secondAttribute="bottom" id="dXR-RB-Mjp"/>
                                     <constraint firstItem="3qb-Lj-8Z0" firstAttribute="top" secondItem="BTF-Q3-0j7" secondAttribute="bottom" id="fM1-wI-IkF"/>
-                                    <constraint firstItem="BTF-Q3-0j7" firstAttribute="top" secondItem="QlY-mf-idy" secondAttribute="bottom" constant="20" id="kAG-XZ-hig"/>
+                                    <constraint firstItem="BTF-Q3-0j7" firstAttribute="top" secondItem="QlY-mf-idy" secondAttribute="bottom" constant="15" id="kAG-XZ-hig"/>
                                     <constraint firstItem="3qb-Lj-8Z0" firstAttribute="centerX" secondItem="xnw-V7-9Mh" secondAttribute="centerX" id="ngd-tA-5JO"/>
                                     <constraint firstItem="QlY-mf-idy" firstAttribute="top" secondItem="fau-wa-EEX" secondAttribute="bottom" constant="30" id="o6b-dg-c3v"/>
                                     <constraint firstAttribute="bottom" secondItem="WNr-2T-4Ua" secondAttribute="bottom" id="rlG-mq-T1V"/>
@@ -154,7 +158,7 @@
                         <outlet property="alertBG" destination="81b-Z6-ShM" id="AGg-Ak-uze"/>
                         <outlet property="bgImageView" destination="WNr-2T-4Ua" id="uMy-b8-10w"/>
                         <outlet property="durationLabel" destination="3qb-Lj-8Z0" id="oGL-a1-mFY"/>
-                        <outlet property="maxSpeedLabel" destination="tIM-UN-khu" id="V0Z-tZ-Nml"/>
+                        <outlet property="maxSpeedTextField" destination="qtL-CN-uvQ" id="tyF-MB-B32"/>
                         <outlet property="speedLabel" destination="Wpx-Ls-ceS" id="eYi-vq-ezz"/>
                         <outlet property="warningLabel" destination="neW-c2-uck" id="XPh-o2-Rfc"/>
                     </connections>
@@ -224,16 +228,16 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="-8" translatesAutoresizingMaskIntoConstraints="NO" id="fRq-b2-Ibh">
-                                                    <rect key="frame" x="289" y="33.666666666666671" width="71" height="63.666666666666671"/>
+                                                    <rect key="frame" x="284.33333333333331" y="33.666666666666671" width="75.666666666666686" height="63.666666666666671"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="24" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycX-KL-qYZ">
-                                                            <rect key="frame" x="14" y="0.0" width="43" height="45.666666666666664"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycX-KL-qYZ">
+                                                            <rect key="frame" x="16.333333333333371" y="0.0" width="43" height="45.666666666666664"/>
                                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="35"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEO-CI-FW5">
-                                                            <rect key="frame" x="0.0" y="37.666666666666664" width="71" height="26"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seconds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEO-CI-FW5">
+                                                            <rect key="frame" x="0.0" y="37.666666666666664" width="75.666666666666671" height="26"/>
                                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -285,6 +289,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LUx-FZ-Ltq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="911.59420289855075" y="129.91071428571428"/>
+        </scene>
+        <!--Max SpeedVC-->
+        <scene sceneID="I7S-Qh-7pW">
+            <objects>
+                <viewController id="CI0-c1-gHx" customClass="MaxSpeedVC" customModule="Speed_Limit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="roa-6T-U3g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kTc-3E-j7q">
+                                <rect key="frame" x="26" y="194" width="323" height="129.33333333333337"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="100"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KM/H" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xnN-vO-scl">
+                                <rect key="frame" x="158.66666666666666" y="323.33333333333331" width="58" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kTc-3E-j7q" firstAttribute="top" secondItem="W4N-pc-FV0" secondAttribute="top" constant="150" id="5ZG-uw-9ut"/>
+                            <constraint firstItem="xnN-vO-scl" firstAttribute="centerX" secondItem="roa-6T-U3g" secondAttribute="centerX" id="6B8-fR-ZEa"/>
+                            <constraint firstItem="kTc-3E-j7q" firstAttribute="leading" secondItem="W4N-pc-FV0" secondAttribute="leading" constant="26" id="Zyl-9l-Crh"/>
+                            <constraint firstItem="xnN-vO-scl" firstAttribute="top" secondItem="kTc-3E-j7q" secondAttribute="bottom" id="mMV-jA-of5"/>
+                            <constraint firstItem="W4N-pc-FV0" firstAttribute="trailing" secondItem="kTc-3E-j7q" secondAttribute="trailing" constant="26" id="v8v-0b-ap5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="W4N-pc-FV0"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="reA-Mh-o0I"/>
+                    <connections>
+                        <outlet property="speedTextField" destination="kTc-3E-j7q" id="PQR-uV-qlD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HeL-VB-N5e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="909.60000000000002" y="869.70443349753702"/>
         </scene>
     </scenes>
     <resources>
