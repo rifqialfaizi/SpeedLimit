@@ -19,6 +19,7 @@
 		07CED1C9252ACDD9008A8B0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07CED1C7252ACDD9008A8B0B /* Main.storyboard */; };
 		07CED1CB252ACDDB008A8B0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07CED1CA252ACDDB008A8B0B /* Assets.xcassets */; };
 		07CED1CE252ACDDB008A8B0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07CED1CC252ACDDB008A8B0B /* LaunchScreen.storyboard */; };
+		07ED9E5425B8074500A7C979 /* MaxSpeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07ED9E5325B8074500A7C979 /* MaxSpeedVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		07CED1CA252ACDDB008A8B0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07CED1CD252ACDDB008A8B0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07CED1CF252ACDDB008A8B0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07ED9E5325B8074500A7C979 /* MaxSpeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxSpeedVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				07ADCA842530A16600DFD37F /* SpeedLimitVC.swift */,
 				073003442551803C00DF6508 /* HistoryVC.swift */,
+				07ED9E5325B8074500A7C979 /* MaxSpeedVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				0730034B2551A3FA00DF6508 /* History.swift in Sources */,
 				073003452551803C00DF6508 /* HistoryVC.swift in Sources */,
 				0730034E2551A61300DF6508 /* Data Services.swift in Sources */,
+				07ED9E5425B8074500A7C979 /* MaxSpeedVC.swift in Sources */,
 				07CED1C2252ACDD9008A8B0B /* AppDelegate.swift in Sources */,
 				07ADCA852530A16600DFD37F /* SpeedLimitVC.swift in Sources */,
 				07CED1C4252ACDD9008A8B0B /* SceneDelegate.swift in Sources */,

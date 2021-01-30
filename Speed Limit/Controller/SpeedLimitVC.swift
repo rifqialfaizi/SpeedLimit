@@ -17,13 +17,16 @@ class SpeedLimitVC: UIViewController {
     @IBOutlet weak var warningLabel: UILabel!
     @IBOutlet weak var speedLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
-    @IBOutlet weak var maxSpeedLabel: UILabel!
+    @IBOutlet weak var maxSpeedTextField: UITextField!
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var bgImageView: UIImageView!
     @IBOutlet weak var alertBG: UIView!
     
     
     let manager = CLLocationManager()
+    let speed = ["10","20","30","40","50","60","70","80","90","100","110","120","130","140","150"]
+    
+    var pickerView = UIPickerView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +39,16 @@ class SpeedLimitVC: UIViewController {
        // duration = Timer.scheduledTimer(timeInterval: 1, target: self, selector: Selector(("timerCount")), userInfo: nil, repeats: true)
         
         duration = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.timerCount), userInfo: nil, repeats: true)
+        
+        
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        
+        maxSpeedTextField.inputView = pickerView
+        
     }
+    
+
 
     var duration = Timer()
     var time = 0
@@ -52,9 +64,17 @@ class SpeedLimitVC: UIViewController {
     func getHistorySpeed(speed: Int) -> [Int] {
         return historySpeed
     }
+    
+    @IBAction func setMaxSpeed(_ sender: Any) {
+ 
+        
+    }
+    
 }
 
+
 extension SpeedLimitVC: CLLocationManagerDelegate {
+    
     
   func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
     let location = locations.first!
@@ -65,7 +85,7 @@ extension SpeedLimitVC: CLLocationManagerDelegate {
     
     func checkSpeedLimit(_ speed: Int) {
 
-        if speed > 3 {
+        if speed > 5 {
             
             warningLabel.text = "Too Fast!"
             
@@ -141,6 +161,30 @@ extension SpeedLimitVC: CLLocationManagerDelegate {
     }
     
     
+    
+    
+}
+
+extension SpeedLimitVC: UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return speed.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        speed[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        maxSpeedTextField.text = speed[row]
+        maxSpeedTextField.resignFirstResponder()
+    }
 }
 
 
