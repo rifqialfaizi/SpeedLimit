@@ -48,7 +48,7 @@ class SpeedLimitVC: UIViewController {
         
     }
     
-
+    var maxSpeed = 0
 
     var duration = Timer()
     var time = 0
@@ -67,6 +67,9 @@ class SpeedLimitVC: UIViewController {
     
     @IBAction func setMaxSpeed(_ sender: Any) {
  
+        if let speed = Int(maxSpeedTextField.text!) {
+                maxSpeed = speed
+        }
         
     }
     
@@ -85,7 +88,7 @@ extension SpeedLimitVC: CLLocationManagerDelegate {
     
     func checkSpeedLimit(_ speed: Int) {
 
-        if speed > 5 {
+        if speed > maxSpeed {
             
             warningLabel.text = "Too Fast!"
             
@@ -94,7 +97,7 @@ extension SpeedLimitVC: CLLocationManagerDelegate {
             print("Too Fast! Your current speed is \(speed)")
             
             isOverLimit = true
-        } else if speed < 3 {
+        } else if speed < maxSpeed {
             
             alertBG.backgroundColor = UIColor.clear
            
