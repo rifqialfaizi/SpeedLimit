@@ -20,7 +20,7 @@ open SpeedLimit.workspace # or xed .
 - Test (⌘ + U)
 ```
 
-## 👨🏻‍💻 What to Do Design
+## 👨🏻‍💻 Speed Limit Design
   <p float="left">
     <img src="./iPhone/iPhone.png" width="20%"/>
     <img src="./iPhone/iPhone Copy 2.png" width="20%"/> 
