@@ -9,7 +9,7 @@
 
 
 An application for safing your life while you were driving!
-## 🏃‍♂️ Getting Started
+## Getting Started
 
 ``` bash
 git clone https://github.com/rifqialfaizi/SpeedLimit.git
@@ -20,7 +20,7 @@ open SpeedLimit.workspace # or xed .
 - Test (⌘ + U)
 ```
 
-## 👨🏻‍💻 Speed Limit Design
+## Speed Limit Design
   <p float="left">
     <img src="./iPhone/iPhone.png" width="20%"/>
     <img src="./iPhone/iPhone Copy 2.png" width="20%"/> 
@@ -37,11 +37,11 @@ Feature:
 - History
 
 
-## 🎉 Why I am building this?
-1. Explore CLLocation 🔥
+## Why I am building this?
+1. Explore CLLocatio
 2. Learn new thing
 
 
 
-## 📱 Preview
+## Preview
 <img src="./Screen Record/Screen Record.gif" alt="alt text" width="210px" height="408px">
